@@ -1,0 +1,59 @@
+
+body {
+   background-color: #ffffff;
+   animation: fadeInAnimation ease 3s;
+   animation-iteration-count: 1;
+   animation-fill-mode: forwards;
+   color: white;
+   overflow-x: hidden;
+}
+.longe{
+   margin-top: 2%;
+}
+.tamanho{
+    width: 80px;
+
+}
+
+.firstwall{
+   background-image: url(../img/code.png);
+   background-size: cover;
+
+}
+
+.texto-entrada{
+    flex: 1;
+    align-self: flex-end;
+}
+
+.foto{
+	max-width: 50%;
+	-moz-transition: all 0.3s;
+	-webkit-transition: all 0.3s;
+    margin-left: 20%;
+	transition: all 0.3s;
+}
+
+.foto:hover  {
+	-moz-transform: scale(1.1);
+	-webkit-transform: scale(1.1);
+	transform: scale(1.1);
+}
+.card-fechado{
+    width:300px;
+    height:200px;
+    margin-top:10%;
+    cursor:pointer;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+
+@keyframes fadeInAnimation {
+   0% {
+       opacity: 0;
+   }
+   100% {
+       opacity: 1;
+    }
+}
