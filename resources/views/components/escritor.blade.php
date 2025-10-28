@@ -1,86 +1,134 @@
-<h1 class="text-center color-text mt-5">Livros de minha autoria em desenvolvimento</h1>
-<div class="row">
-  <div class="col-md-6">
-    <div class="mt-3 d-flex justify-content-center">
-      <div class="card">
-        <img src="img/Daimon.jpeg" class="card-img-top" alt="...">
-        <div class="card-body">
-          <h5> Daimon uma vida dois lados</h5>
-          <p class="card-text text-card mt-4">
-            Num abismo de melancolia, um homem afunda no passado sombrio e desânimo diante do futuro incerto.<br>
-            Após
-            um acidente, a amnésia se torna sua aliada, oferecendo uma tela em branco para recriar a própria
-            vida.<br>
-            Nessa jornada de autodescoberta, redescobre o mundo e abraça a chance de se reinventar.<br>
-            A narrativa cativante mergulha nas profundezas da psique humana,encontrando a luz nos mesmo nos momentos
-            mais sombrios.
+<section class="media-stack">
+  <header class="media-stack__header">
+    <p class="media-stack__eyebrow">Roteiros e universos próprios</p>
+    <h2 class="media-stack__title">Meus Livros</h2>
+    <p class="media-stack__subtitle">Projetos autorais em andamento, cada um explorando mundos diferentes que me motivam
+      a escrever.</p>
+  </header>
+
+  <div class="media-slider-wrap">
+    <div class="media-slider" data-slider="autor">
+      <article class="media-card" style="--accent:167 139 250;">
+        <div class="media-card__visual">
+          <img src="img/Daimon.png" alt="Capa do livro Daimon" loading="lazy">
+        </div>
+        <div class="media-card__content">
+          <h3 class="media-card__heading">Daimon: Uma Vida, Dois Lados</h3>
+          <p class="media-card__text">
+            Thriller psicológico sobre um homem que perde a memória após um acidente e precisa reconstruir a própria
+            identidade. A ausência de lembranças abre espaço para reescrever o passado — mas nem todo trauma aceita
+            ser esquecido.
           </p>
+          <dl class="media-card__meta">
+            <div>
+              <dt>Gênero</dt>
+              <dd>Suspense psicológico</dd>
+            </div>
+            <div>
+              <dt>Status</dt>
+              <dd>Rascunho avançado</dd>
+            </div>
+          </dl>
         </div>
-      </div>
-    </div>
-  </div>
-  <div class="col-md-6">
-    <div class="mt-3 d-flex justify-content-center">
-      <div class="card">
-        <img src="img/aordem.jpeg" class="card-img-top" alt="...">
-        <div class="card-body">
-          <h5>A ordem</h5>
-          <p class="card-text text-card mt-5">
-            Em um cenário de perfeição, a fome foi erradicada, as classes sociais abolidas, e todos operam em nome
-            da ordem.<br> Desde a devastação da última pandemia global, a Ordem emerge como a religião mais
-            poderosa,
-            impondo regras para evitar castigos divinos.<br> "Obedeça à Ordem, não questione a Ordem" tornou-se a
-            palavra de Deus na Terra, inquestionável. Surge o dilema: até onde a liberdade individual deve ceder
-            para seguir cegamente?
+      </article>
+
+      <article class="media-card" style="--accent:249 168 212;">
+        <div class="media-card__visual">
+          <img src="img/aordem.jpeg" alt="Capa do livro A Ordem" loading="lazy">
+        </div>
+        <div class="media-card__content">
+          <h3 class="media-card__heading">A Ordem</h3>
+          <p class="media-card__text">
+            Distopia onde a humanidade entregou liberdade em troca de estabilidade. A religião hegemônica dita condutas
+            para evitar uma nova pandemia — até que uma faísca de rebeldia questiona o que significa obedecer cegamente.
           </p>
+          <dl class="media-card__meta">
+            <div>
+              <dt>Gênero</dt>
+              <dd>Distopia futurista</dd>
+            </div>
+            <div>
+              <dt>Status</dt>
+              <dd>Planejamento de capítulos</dd>
+            </div>
+          </dl>
         </div>
-      </div>
+      </article>
+
+      <article class="media-card" style="--accent:52 211 153;">
+        <div class="media-card__visual">
+          <img src="img/CasteloBruxo.png" alt="Capa de Revolução das Memórias" loading="lazy">
+        </div>
+        <div class="media-card__content">
+          <h3 class="media-card__heading">Revolução das Memórias: Silêncio Mágico</h3>
+          <p class="media-card__text">
+            Fanfic ambientada no universo de Hogwarts. Megan, uma auror brasileira, e Miguel, calouro de Castelo Bruxo,
+            desvendam desaparecimentos e um plano governamental para apagar memórias — em uma aventura que mistura
+            política e magia.
+          </p>
+          <dl class="media-card__meta">
+            <div>
+              <dt>Gênero</dt>
+              <dd>Fantasia moderna</dd>
+            </div>
+            <div>
+              <dt>Status</dt>
+              <dd>Revisão do primeiro ato</dd>
+            </div>
+          </dl>
+        </div>
+      </article>
+
+      <article class="media-card" style="--accent:251 191 36;">
+        <div class="media-card__visual">
+          <img src="img/capawestern.jpeg" alt="Capa de Terras de Ninguém" loading="lazy">
+        </div>
+        <div class="media-card__content">
+          <h3 class="media-card__heading">Terras de Ninguém</h3>
+          <p class="media-card__text">
+            Western steampunk sobre o forasteiro que chega à Colina de Vapor. Entre máquinas a vapor e intrigas
+            militares, ele descobre segredos capazes de redefinir o equilíbrio entre as nações em guerra.
+          </p>
+          <dl class="media-card__meta">
+            <div>
+              <dt>Gênero</dt>
+              <dd>Steampunk faroeste</dd>
+            </div>
+            <div>
+              <dt>Status</dt>
+              <dd>Outline e worldbuilding</dd>
+            </div>
+          </dl>
+        </div>
+      </article>
+
+      <article class="media-card" style="--accent:251 191 36;">
+        <div class="media-card__visual">
+          <img src="img/CTR.png" alt="Capa A Canção dos Três Reinos" loading="lazy">
+        </div>
+        <div class="media-card__content">
+          <h3 class="media-card__heading">A Canção dos Três Reinos</h3>
+          <p class="media-card__text">
+            Em um mundo dividido entre fé, poder e sangue, três reinos lutam pelo domínio e pela sobrevivência.
+            Entre o gelo de Kandor, o ouro de Eldoria e o fogo de Nilfikeim, o destino dos homens é escrito pelos deuses
+            e pela guerra.
+          </p>
+          <dl class="media-card__meta">
+            <div>
+              <dt>Gênero</dt>
+              <dd>Fantasia Medieval</dd>
+            </div>
+            <div>
+              <dt>Status</dt>
+              <dd>Outline e worldbuilding</dd>
+            </div>
+          </dl>
+        </div>
+      </article>
     </div>
   </div>
-  <div class="row">
-    <div class="col-md-6">
-      <div class="mt-3 d-flex justify-content-center" onclick="chagePage('leste')">
-        <div class="card">
-          <img src="img/CasteloBruxo.png" class="card-img-top" alt="...">
-          <div class="card-body">
-            <h5>Revolução das Memórias: Silêncio Mágico</h5>
-            <p class="card-text text-card mt-3">
-              No fascinante universo de Harry Potter.Megan, uma destemida auror encarregada de desvendar
-              contrabandos
-              no Brasil, e Miguel, um
-              jovem aluno do primeiro ano em Castelo Bruxo.<br> No entanto, o que ambos não imaginam é que estão
-              prestes a
-              se embrenhar em um mistério ainda maior: uma conspiração secreta urdida pelo governo, que, nas
-              sombras,
-              está apagando as memórias de inúmeros bruxos.<br> Em meio a magia, prometendo aos leitores uma viagem
-              emocionante e repleta de
-              reviravoltas no mundo mágico que amamos.
-            </p>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="col-md-6">
-      <div class="mt-3 d-flex justify-content-center" onclick="chagePage('oeste')">
-        <div class="card">
-          <img src="img/capawestern.jpeg" class="card-img-top" alt="...">
-          <div class="card-body">
-            <h5>Terras de Ninguem</h5>
-            <p class="card-text text-card mt-5">
-              Sobre as areias das Terras de Ninguém, desponta a enigmática Colina de Vapor, palco de "Os Segredos
-              Além
-              do Deserto".<br> Um forasteiro de Calhes, em sua jornada através do deserto, descobre uma cidade
-              envolta
-              em
-              mistérios e governada por uma poderosa família.<br> Enquanto a guerra entre Nordia e Calhes se desenha
-              no
-              horizonte, o destino da Colina de Vapor se entrelaça com os segredos ancestrais revelados pelo
-              forasteiro, lançando luz sobre uma trama steampunk repleta de intrigas, alianças inusitadas e
-              reviravoltas que podem redefinir as Terras de Ninguém.
-            </p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
+
+  <footer class="media-slider__hint">
+    Cada projeto recebe atualizações mensais — role para ver todos
+  </footer>
+</section>
