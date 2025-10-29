@@ -113,7 +113,11 @@
         </div>
       </div>
     </section>
-
+    <div class="justify-content-center d-flex my-5">
+      <div class="card assunto-card">
+        <h1>Meus Hobbys</h1>
+      </div>
+    </div>
     <!-- FAVORITOS -------------------------------------------------------->
     <section id="favorites" class="mt-5">
       <div class="glass p-3 p-lg-4">
@@ -124,23 +128,19 @@
           <div class="carousel-inner rounded-3 overflow-hidden shadow-lg">
             <div class="carousel-item active" data-title="O Senhor dos Anéis"
               data-desc="Batalhas épicas, trilha inesquecível — cinema no auge." data-year="2001">
-              <img src="movies/lord.jpeg"
-                class="d-block w-100 media-img" alt="O Senhor dos Anéis">
+              <img src="movies/lord.jpeg" class="d-block w-100 media-img" alt="O Senhor dos Anéis">
             </div>
             <div class="carousel-item" data-title="Star Wars"
               data-desc="Uma mitologia que moldou gerações. Força sempre." data-year="1977">
-              <img src="movies/sw.jpeg"
-                class="d-block w-100 media-img" alt="Star Wars">
+              <img src="movies/sw.jpeg" class="d-block w-100 media-img" alt="Star Wars">
             </div>
             <div class="carousel-item" data-title="Planeta dos Macacos"
               data-desc="Real, tensa e emocionante — trilogia muito redonda." data-year="2011–2017">
-              <img src="movies/apes_1.jpg"
-                class="d-block w-100 media-img" alt="Planeta dos Macacos">
+              <img src="movies/apes_1.jpg" class="d-block w-100 media-img" alt="Planeta dos Macacos">
             </div>
             <div class="carousel-item" data-title="Matrix" data-desc="Mind-blowing de 1999 que mudou a cultura pop."
               data-year="1999">
-              <img src="movies/matrix.jpg"
-                class="d-block w-100 media-img" alt="Matrix">
+              <img src="movies/matrix.jpg" class="d-block w-100 media-img" alt="Matrix">
             </div>
           </div>
 
@@ -1099,6 +1099,31 @@
         animation: none !important;
         transition: none !important;
       }
+    }
+
+    .assunto-card {
+      background: rgba(255, 255, 255, 0.1);
+      color: white;
+      border: none;
+      padding: 20px 40px;
+      border-radius: 15px;
+      text-align: center;
+      position: relative;
+      transition: all 0.4s ease;
+      font-weight: bold;
+      box-shadow: 0 0 25px rgba(255, 255, 255, 0.4);
+      backdrop-filter: blur(10px);
+    }
+
+    .assunto-card h1 {
+      text-shadow: 0 0 8px white, 0 0 15px rgba(255, 255, 255, 0.7);
+      letter-spacing: 2px;
+      text-transform: uppercase;
+    }
+
+    .assunto-card:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 35px rgba(255, 255, 255, 0.8);
     }
   </style>
 </x-layout>
