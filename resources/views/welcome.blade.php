@@ -50,7 +50,7 @@
 
         <div class="social-wrapper mt-4">
           <canvas id="matrix-social" class="matrix-canvas" aria-hidden="true"></canvas>
-          <a href="Bruno Santos Vieira.pdf" download class="btn btn-cta me-1">
+          <a href="{{ $currentLocale === 'en' ? 'BrunoSantosVieiraEn.pdf' : 'BrunoSantosVieira.pdf' }}" download class="btn btn-cta me-1">
             <i class="fa-solid fa-file-arrow-down me-2"></i> {{ __('portfolio.resume_download') }}
           </a>
           <a href="https://www.linkedin.com/in/brunosantosvieira/" target="_blank" class="btn btn-glass">
