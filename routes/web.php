@@ -15,8 +15,19 @@ use App\Http\Controllers\BookController;
 |
 */
 
+Route::get('/lang/{locale}', function (string $locale) {
+    if (!in_array($locale, ['en', 'pt'], true)) {
+        abort(404);
+    }
+
+    session(['locale' => $locale]);
+
+    return redirect()->back();
+})->name('lang.switch');
+
 Route::get('/', function () {
     return view('welcome');
 });
-Route::get('leste',[BookController::class,'leste']);
-Route::resource('oeste',BookController::class);
+
+Route::get('leste', [BookController::class, 'leste']);
+Route::resource('oeste', BookController::class);

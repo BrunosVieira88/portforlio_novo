@@ -1,4 +1,5 @@
-<x-layout title="Portifolio">
+<x-layout :title="__('portfolio.page_title')">
+  @php($currentLocale = app()->getLocale())
   <!-- NAV --------------------------------------------------------------->
   <nav class="navbar navbar-expand-lg navbar-dark nav-glass fixed-top">
     <div class="container">
@@ -8,10 +9,18 @@
       </button>
       <div class="collapse navbar-collapse" id="navMenu">
         <ul class="navbar-nav ms-auto gap-lg-3">
-          <li class="nav-item"><a class="nav-link" href="#about">Sobre</a></li>
-          <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
-          <li class="nav-item"><a class="nav-link" href="#highlights">Destaques</a></li>
-          <li class="nav-item"><a class="nav-link" href="#favorites">Favoritos</a></li>
+          <li class="nav-item"><a class="nav-link" href="#about">{{ __('portfolio.nav_about') }}</a></li>
+          <li class="nav-item"><a class="nav-link" href="#skills">{{ __('portfolio.nav_skills') }}</a></li>
+          <li class="nav-item"><a class="nav-link" href="#highlights">{{ __('portfolio.nav_highlights') }}</a></li>
+          <li class="nav-item"><a class="nav-link" href="#favorites">{{ __('portfolio.nav_favorites') }}</a></li>
+          <li class="nav-item d-flex align-items-center gap-1">
+            <a class="btn btn-sm {{ $currentLocale === 'en' ? 'btn-light' : 'btn-glass' }}" href="{{ route('lang.switch', 'en') }}" aria-label="English">
+              🇺🇸
+            </a>
+            <a class="btn btn-sm {{ $currentLocale === 'pt' ? 'btn-light' : 'btn-glass' }}" href="{{ route('lang.switch', 'pt') }}" aria-label="Portugues">
+              🇧🇷
+            </a>
+          </li>
         </ul>
       </div>
     </div>
@@ -42,7 +51,7 @@
         <div class="social-wrapper mt-4">
           <canvas id="matrix-social" class="matrix-canvas" aria-hidden="true"></canvas>
           <a href="Bruno Santos Vieira.pdf" download class="btn btn-cta me-1">
-            <i class="fa-solid fa-file-arrow-down me-2"></i> Baixar Currículo
+            <i class="fa-solid fa-file-arrow-down me-2"></i> {{ __('portfolio.resume_download') }}
           </a>
           <a href="https://www.linkedin.com/in/brunosantosvieira/" target="_blank" class="btn btn-glass">
             <i class="fab fa-linkedin me-2"></i> LinkedIn
@@ -78,15 +87,59 @@
       <div class="glass p-4 p-lg-5">
         <h2 class="section-title">Bruno Santos Vieira</h2>
         <p class="fs-5">
-          Olá! Sou um desenvolvedor apaixonado por criar soluções escaláveis e elegantes.
-          Tenho formação em Análise e Desenvolvimento de Sistemas e experiência prática
-          em <strong>PHP, Laravel, Vue.js, JavaScript e Bootstrap</strong>. Curto trabalhar
-          próximo do time e do cliente, com comunicação clara, entrega contínua e código limpo.
+          {{ __('portfolio.about_p1') }}
         </p>
         <p class="fs-5 mb-0">
-          Busco vagas onde eu possa construir features ponta-a-ponta, colaborar em revisões de PR,
-          escrever testes e ajudar a melhorar a DX do time.
+          {{ __('portfolio.about_p2') }}
         </p>
+        <p class="fs-5 mt-3 mb-0">
+          {{ __('portfolio.pokemon_project_text') }}:
+          <a href="https://pokemon-pokedex-7b20c12acbe4.herokuapp.com/" target="_blank" rel="noopener noreferrer">{{ __('portfolio.pokemon_project_cta') }}</a>
+        </p>
+      </div>
+    </section>
+
+    <section id="skills" class="mt-5">
+      <div class="glass p-4 p-lg-5">
+        <p class="xp-eyebrow mb-2">{{ __('portfolio.xp_eyebrow') }}</p>
+        <h2 class="section-title">{{ __('portfolio.xp_title') }}</h2>
+        <p class="fs-5 text-muted-200 mb-4">{{ __('portfolio.xp_intro') }}</p>
+
+        <div class="xp-grid">
+          <article class="xp-card">
+            <h3>{{ __('portfolio.xp_card_1_title') }}</h3>
+            <p>{{ __('portfolio.xp_card_1_text') }}</p>
+          </article>
+          <article class="xp-card">
+            <h3>{{ __('portfolio.xp_card_2_title') }}</h3>
+            <p>{{ __('portfolio.xp_card_2_text') }}</p>
+          </article>
+          <article class="xp-card">
+            <h3>{{ __('portfolio.xp_card_3_title') }}</h3>
+            <p>{{ __('portfolio.xp_card_3_text') }}</p>
+          </article>
+          <article class="xp-card">
+            <h3>{{ __('portfolio.xp_card_4_title') }}</h3>
+            <p>{{ __('portfolio.xp_card_4_text') }}</p>
+          </article>
+          <article class="xp-card">
+            <h3>{{ __('portfolio.xp_card_5_title') }}</h3>
+            <p>{{ __('portfolio.xp_card_5_text') }}</p>
+          </article>
+          <article class="xp-card">
+            <h3>{{ __('portfolio.xp_card_6_title') }}</h3>
+            <p>{{ __('portfolio.xp_card_6_text') }}</p>
+          </article>
+        </div>
+
+        <div class="xp-recruiters mt-4">
+          <h3 class="xp-recruiters__title">{{ __('portfolio.xp_recruiters_title') }}</h3>
+          <ul class="xp-recruiters__list mb-0">
+            <li>{{ __('portfolio.xp_recruiter_1') }}</li>
+            <li>{{ __('portfolio.xp_recruiter_2') }}</li>
+            <li>{{ __('portfolio.xp_recruiter_3') }}</li>
+          </ul>
+        </div>
       </div>
     </section>
 
@@ -101,21 +154,21 @@
         </div>
         <div class="col-md-4">
           <div class="metric glass">
-            <span class="metric-number">Entrega</span>
-            <span class="metric-label">UX simples • releases frequentes</span>
+            <span class="metric-number">{{ __('portfolio.metric_delivery') }}</span>
+            <span class="metric-label">{{ __('portfolio.metric_delivery_label') }}</span>
           </div>
         </div>
         <div class="col-md-4">
           <div class="metric glass">
-            <span class="metric-number">Qualidade</span>
-            <span class="metric-label">Code review • testes básicos</span>
+            <span class="metric-number">{{ __('portfolio.metric_quality') }}</span>
+            <span class="metric-label">{{ __('portfolio.metric_quality_label') }}</span>
           </div>
         </div>
       </div>
     </section>
     <div class="justify-content-center d-flex my-5">
       <div class="card assunto-card">
-        <h1>Meus Hobbys</h1>
+        <h1>{{ __('portfolio.hobbies') }}</h1>
       </div>
     </div>
     <!-- FAVORITOS -------------------------------------------------------->
@@ -126,19 +179,19 @@
         <div id="favCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="5500"
           data-bs-touch="true" data-bs-keyboard="true">
           <div class="carousel-inner rounded-3 overflow-hidden shadow-lg">
-            <div class="carousel-item active" data-title="O Senhor dos Anéis"
-              data-desc="Batalhas épicas, trilha inesquecível — cinema no auge." data-year="2001">
-              <img src="movies/lord.jpeg" class="d-block w-100 media-img" alt="O Senhor dos Anéis">
+            <div class="carousel-item active" data-title="{{ __('portfolio.carousel_title_lotr') }}"
+              data-desc="{{ __('portfolio.carousel_desc_lotr') }}" data-year="2001">
+              <img src="movies/lord.jpeg" class="d-block w-100 media-img" alt="{{ __('portfolio.carousel_title_lotr') }}">
             </div>
             <div class="carousel-item" data-title="Star Wars"
-              data-desc="Uma mitologia que moldou gerações. Força sempre." data-year="1977">
+              data-desc="{{ __('portfolio.carousel_desc_sw') }}" data-year="1977">
               <img src="movies/sw.jpeg" class="d-block w-100 media-img" alt="Star Wars">
             </div>
-            <div class="carousel-item" data-title="Planeta dos Macacos"
-              data-desc="Real, tensa e emocionante — trilogia muito redonda." data-year="2011–2017">
-              <img src="movies/apes_1.jpg" class="d-block w-100 media-img" alt="Planeta dos Macacos">
+            <div class="carousel-item" data-title="{{ __('portfolio.carousel_title_apes') }}"
+              data-desc="{{ __('portfolio.carousel_desc_apes') }}" data-year="2011–2017">
+              <img src="movies/apes_1.jpg" class="d-block w-100 media-img" alt="{{ __('portfolio.carousel_title_apes') }}">
             </div>
-            <div class="carousel-item" data-title="Matrix" data-desc="Mind-blowing de 1999 que mudou a cultura pop."
+            <div class="carousel-item" data-title="Matrix" data-desc="{{ __('portfolio.carousel_desc_matrix') }}"
               data-year="1999">
               <img src="movies/matrix.jpg" class="d-block w-100 media-img" alt="Matrix">
             </div>
@@ -147,49 +200,65 @@
           <!-- CONTROLES NATIVOS DO BOOTSTRAP -->
           <button class="carousel-control-prev" type="button" data-bs-target="#favCarousel" data-bs-slide="prev">
             <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Anterior</span>
+            <span class="visually-hidden">{{ __('portfolio.carousel_prev') }}</span>
           </button>
           <button class="carousel-control-next" type="button" data-bs-target="#favCarousel" data-bs-slide="next">
             <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Próximo</span>
+            <span class="visually-hidden">{{ __('portfolio.carousel_next') }}</span>
           </button>
         </div>
 
         <div class="media-info mt-3">
-          <h4 class="mb-1" id="mediaTitle">O Senhor dos Anéis <span class="year">• 2001</span></h4>
-          <p class="mb-0 text-muted-200" id="mediaDesc">Batalhas épicas, trilha inesquecível — cinema no auge.</p>
+          <h4 class="mb-1" id="mediaTitle">{{ __('portfolio.carousel_title_lotr') }} <span class="year">• 2001</span></h4>
+          <p class="mb-0 text-muted-200" id="mediaDesc">{{ __('portfolio.carousel_desc_lotr') }}</p>
         </div>
 
         <ul class="nav nav-pills fancy-pills mt-4" id="favTabs" role="tablist">
           <li class="nav-item" role="presentation"><button class="nav-link active" data-bs-toggle="pill"
-              data-bs-target="#tab-filmes" type="button">Filmes</button></li>
+              data-bs-target="#tab-filmes" type="button">{{ __('portfolio.tab_movies') }}</button></li>
           <li class="nav-item" role="presentation"><button class="nav-link" data-bs-toggle="pill"
-              data-bs-target="#tab-jogos" type="button">Jogos</button></li>
+              data-bs-target="#tab-jogos" type="button">{{ __('portfolio.tab_games') }}</button></li>
           <li class="nav-item" role="presentation"><button class="nav-link" data-bs-toggle="pill"
-              data-bs-target="#tab-livros" type="button">Livros</button></li>
+              data-bs-target="#tab-livros" type="button">{{ __('portfolio.tab_books') }}</button></li>
           <li class="nav-item" role="presentation"><button class="nav-link" data-bs-toggle="pill"
-              data-bs-target="#tab-escritor" type="button">Meus livros</button></li>
+              data-bs-target="#tab-escritor" type="button">{{ __('portfolio.tab_my_books') }}</button></li>
         </ul>
 
         <div class="tab-content mt-3">
           <div class="tab-pane fade show active" id="tab-filmes">
-            <x-filmes />
+            @if(app()->getLocale() === 'en')
+              <x-filmes-en />
+            @else
+              <x-filmes />
+            @endif
           </div>
           <div class="tab-pane fade" id="tab-jogos">
-            <x-jogos />
+            @if(app()->getLocale() === 'en')
+              <x-jogos-en />
+            @else
+              <x-jogos />
+            @endif
           </div>
           <div class="tab-pane fade" id="tab-livros">
-            <x-livros />
+            @if(app()->getLocale() === 'en')
+              <x-livros-en />
+            @else
+              <x-livros />
+            @endif
           </div>
           <div class="tab-pane fade" id="tab-escritor">
-            <x-escritor />
+            @if(app()->getLocale() === 'en')
+              <x-escritor-en />
+            @else
+              <x-escritor />
+            @endif
           </div>
         </div>
       </div>
     </section>
 
     <footer class="py-4 text-center text-muted-300 small mt-5">
-      © <span id="year"></span> Bruno Santos Vieira — Laravel + Bootstrap
+      © <span id="year"></span> Bruno Santos Vieira - {{ __('portfolio.footer') }}
     </footer>
   </div>
 
@@ -336,8 +405,8 @@
         const buttons = [];
         const scrollBy = (direction)=> slider.scrollBy({left: direction * slider.clientWidth * 0.9, behavior:'smooth'});
         [
-          {dir:-1, label:'Anterior', icon:'<i class="fa-solid fa-arrow-left"></i>', className:'is-prev'},
-          {dir: 1, label:'Próximo', icon:'<i class="fa-solid fa-arrow-right"></i>', className:'is-next'}
+          {dir:-1, label:@json(__('portfolio.slider_left')), icon:'<i class="fa-solid fa-arrow-left"></i>', className:'is-prev'},
+          {dir: 1, label:@json(__('portfolio.slider_right')), icon:'<i class="fa-solid fa-arrow-right"></i>', className:'is-next'}
         ].forEach(({dir,label,icon,className})=>{
           const btn = document.createElement('button');
           btn.type = 'button';
@@ -683,6 +752,64 @@
       font-weight: 900;
       letter-spacing: .3px;
       margin-bottom: .8rem
+    }
+
+    .xp-eyebrow {
+      text-transform: uppercase;
+      letter-spacing: .14em;
+      color: var(--accentB);
+      font-size: .78rem;
+      font-weight: 700;
+    }
+
+    .xp-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 1rem;
+    }
+
+    .xp-card {
+      padding: 1rem;
+      border-radius: .9rem;
+      border: 1px solid rgba(255, 255, 255, .14);
+      background: rgba(255, 255, 255, .04);
+    }
+
+    .xp-card h3 {
+      font-size: 1rem;
+      font-weight: 800;
+      margin-bottom: .45rem;
+      color: #fff;
+    }
+
+    .xp-card p {
+      margin: 0;
+      font-size: .93rem;
+      line-height: 1.45;
+      color: var(--muted);
+    }
+
+    .xp-recruiters {
+      padding: 1rem;
+      border-radius: .9rem;
+      border: 1px dashed rgba(0, 255, 163, .45);
+      background: rgba(0, 255, 163, .06);
+    }
+
+    .xp-recruiters__title {
+      margin: 0 0 .6rem;
+      font-size: 1rem;
+      font-weight: 800;
+    }
+
+    .xp-recruiters__list {
+      margin: 0;
+      padding-left: 1rem;
+      color: var(--fg);
+    }
+
+    .xp-recruiters__list li+li {
+      margin-top: .25rem;
     }
 
     .metric {
@@ -1086,6 +1213,10 @@
 
       .portrait-img {
         max-width: 280px;
+      }
+
+      .xp-grid {
+        grid-template-columns: 1fr;
       }
     }
 
