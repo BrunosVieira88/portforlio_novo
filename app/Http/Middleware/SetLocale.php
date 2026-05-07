@@ -9,7 +9,11 @@ class SetLocale
 {
     public function handle(Request $request, Closure $next)
     {
-        app()->setLocale(session('locale', config('app.locale')));
+        if (!$request->session()->has('locale')) {
+            $request->session()->put('locale', 'en');
+        }
+
+        app()->setLocale(session('locale', 'en'));
 
         return $next($request);
     }
